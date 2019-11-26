@@ -522,6 +522,9 @@ export default class VideoPlayer extends Component {
      * @param {float} position position in px of seeker handle}
      */
     setSeekerPosition( position = 0 ) {
+        //if position is null then setting it to zero by default 
+        position = position ? position : 0;
+        
         let state = this.state;
         position = this.constrainToSeekerMinMax( position );
 
